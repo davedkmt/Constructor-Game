@@ -15,7 +15,7 @@ var guessed = true;
 var array = [];
 var win;
 
-// Setting th ecomputer to choose random words
+// Setting the computer to choose random words
 // -------------------------------------------------------------------------
 computersChoice = words[Math.floor(Math.random() * words.length)];
 letters = computersChoice.split("");
