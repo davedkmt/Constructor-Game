@@ -41,22 +41,22 @@ var Word = function() {
     // -------------------------------------------------------------------
     var correct = letters.includes(letter.userInput.toLowerCase());
     if (correct) {
-      var replace = letters.indexOf(letter.userInput);
+      var replace = letters.indexOf(letter.userInput.toLowerCase());
       showBlanks[replace] = letter.userInput;
-      console.log(showBlanks.join(" "));
+      console.log(showBlanks.join(" ").toLowerCase());
       console.log("Correct!");
-      array.push(letter.userInput);
-      if (showBlanks.join(" ") === letters.join(" ").toString()) {
+      array.push(letter.userInput.toLowerCase());
+      if (showBlanks.join(" ").toLowerCase() === letters.join(" ").toString()) {
         console.log("Success! You Won!");
         return;
       }
 
     }
-    // If the guess is not right, this happens
+    // If the user guess is not right, this happens
     // -------------------------------------------------------------------
     else {
       console.log((showBlanks.join(" ")));
-      console.log(letter.userInput + " :is a wrong guess");
+      console.log(letter.userInput.toLowerCase() + " :is a wrong guess");
       guessesLeft--;
       console.log("Guesses remaining: " + guessesLeft);
       if (guessesLeft === 0) {
