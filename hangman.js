@@ -6,7 +6,7 @@ var inquirer = require("inquirer");
 // -------------------------------------------------------------------------
 var words = require ("./words");
 var computersChoice;
-var guessesLeft = 9;
+var guessesLeft = 10;
 var number;
 var dashes = 0;
 var letters;
@@ -47,7 +47,7 @@ var Word = function() {
       console.log("Correct!");
       array.push(letter.userInput);
       if (showBlanks.join(" ") === letters.join(" ").toString()) {
-        console.log("Success! You won!");
+        console.log("Success! You Won!");
         return;
       }
 
