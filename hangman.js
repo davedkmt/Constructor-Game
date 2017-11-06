@@ -52,7 +52,7 @@ var Word = function() {
       }
 
     }
-    // If the user guess is not right, this happens
+    // If the guess is not right, this happens
     // -------------------------------------------------------------------
     else {
       console.log((showBlanks.join(" ")));
